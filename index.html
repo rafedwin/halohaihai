@@ -1,0 +1,233 @@
+<html>
+<head>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Halo! Welcome</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #e0f2f7 0%, #ffffff 100%); /* Biru muda gradasi putih */
+            color: #333;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            overflow: hidden; 
+        }
+        
+        .container {
+            max-width: 800px;
+            width: 100%;
+            text-align: center;
+            padding: 30px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            font-size: 4rem;
+            margin-bottom: 10px;
+            color: #2196f3; 
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease-out;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 30px;
+            animation: fadeIn 1.5s ease-out;
+        }
+        
+        .main-button {
+            background-color: #ff6b6b; 
+            color: white;
+            border: none;
+            padding: 18px 50px;
+            font-size: 1.5rem;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            margin-top: 20px;
+            justify-content: center
+        }
+        
+        .main-button:hover {
+            background-color: #ff5252;
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+        }
+        
+        .main-button:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+        
+        .instruction {
+            font-size: 1.4rem;
+            margin-top: 30px;
+            color: #4CAF50;
+            opacity: 0;
+            transition: opacity 0.8s ease;
+            height: 0;
+            overflow: hidden;
+        }
+        
+        .instruction.show {
+            opacity: 1;
+            height: auto;
+            margin-bottom: 20px; 
+        }
+        
+        .top-left-button {
+            position: fixed;
+            top: 30px;
+            left: 30px;
+            background-color: #4CAF50; 
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            transform: translateY(-20px);
+            z-index: 10;
+        }
+        
+        .top-left-button.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .top-left-button:hover {
+            background-color: #44c454;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+        }
+
+        .running-text {
+            position: absolute;
+            white-space: nowrap;
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #FFC107; 
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            animation: moveText 8s linear infinite; 
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            top: 50%; 
+            transform: translateY(-50%);
+            z-index: 5;
+            left: 100%;
+        }
+
+        .running-text.show {
+            opacity: 1;
+        }
+        @keyframes moveText {
+            0% {
+                left: 100%;
+            }
+            100% {
+                left: -200%;
+            }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .footer {
+            margin-top: auto;
+            padding: 20px;
+            font-size: 0.9rem;
+            opacity: 0.8;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="mainTitle">Halo!</h1>
+        <p class="subtitle">selamat datang di website ini</p>
+        <button id="mainButton" class="main-button">Mulai ya</button>
+        <p id="instruction" class="instruction">Silakan lihat ke kiri atas</p>
+    </div>
+    
+    <button id="topLeftButton" class="top-left-button">Nah tekan lagi yuk</button>
+    
+    <p id="runningText" class="running-text">hayo tangkap aku</p>
+    
+    <div class="footer">
+        Website Halo &copy; 2045 Indonesia Emas
+    </div>
+
+    <script>
+        const mainTitle = document.getElementById('mainTitle');
+        const mainButton = document.getElementById('mainButton');
+        const instruction = document.getElementById('instruction');
+        const topLeftButton = document.getElementById('topLeftButton');
+        const runningText = document.getElementById('runningText');
+        
+        function resetPage() {
+            mainButton.disabled = false;
+            mainButton.textContent = 'Mulai ya';
+            instruction.classList.remove('show');
+            topLeftButton.classList.remove('show');
+            runningText.classList.remove('show');
+            runningText.style.animationPlayState = 'paused';
+            mainButton.style.display = 'block';
+            mainTitle.style.display = 'block';
+            document.querySelector('.subtitle').style.display = 'block';
+        }
+        document.addEventListener('DOMContentLoaded', resetPage);
+        mainButton.addEventListener('click', function() {
+            mainButton.disabled = true;
+            mainButton.textContent = 'Menunggu...';
+            
+            setTimeout(() => {
+                instruction.classList.add('show');
+            }, 500); 
+            
+            setTimeout(() => {
+                topLeftButton.classList.add('show');
+            }, 1200);
+        });
+        
+        topLeftButton.addEventListener('click', function() {
+            topLeftButton.classList.remove('show');
+            topLeftButton.disabled = true;
+            mainButton.style.display = 'none';
+            mainTitle.style.display = 'none';
+            document.querySelector('.subtitle').style.display = 'none';
+            instruction.classList.remove('show'); 
+
+            setTimeout(() => {
+                runningText.classList.add('show');
+                runningText.style.animationPlayState = 'running'; 
+            }, 300); 
+        });
+
+        runningText.addEventListener('click', function() {
+            runningText.classList.remove('show');
+            runningText.style.animationPlayState = 'paused';
+            window.location.href = "https://drive.google.com/file/d/1yLKMlqAf8xkMzzLjfYGhmAVBrOL-R2uo/view?usp=drivesdk"; 
+        });
+    </script>
+</body>
+</html>
