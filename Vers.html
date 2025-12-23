@@ -1,0 +1,232 @@
+<html lang="id">
+<head>
+  <title>RaWin NT</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #dddddd;
+      color: #111;
+    }
+
+    .top-bar {
+      background: #dddddd;
+      text-align: center;
+      padding: 8px;
+      font-size: 13px;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+    }
+
+    .logo {
+      color: #ad0e0e;
+      font-weight: bold;
+      font-size: 28px;
+    }
+
+    .contact-us {
+      display: inline-block;
+      background: #ad0e0e;
+      color: white;
+      border: none;
+      padding: 8px 14px;
+      border-radius: 4px;
+      cursor: pointer;
+      text-decoration: none;
+      font-weight: bold;
+      transition: transform 0.30s ease, box-shadow 0.30s ease;
+    }
+
+    .contact-us:hover {
+      transform: translateY(-3px); 
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2)
+    }
+
+    .navbar {
+      text-align: center;
+      padding: 10px 30px;
+      border-top: 3px solid #ad0e0e;
+      border-bottom: 3px solid #ad0e0e;
+    }
+
+    .navbar a {
+      padding: 5px 15px;
+      text-decoration: none;
+      color: #000000;
+      font-size: 14px;
+      transition: color 0.10s;
+      border-right: 3px solid #ad0e0e
+
+    }
+
+    .navbar a:hover {
+      color: #ff0000;
+    }
+
+    .hero {
+      height: 100%;
+      background: url("hero.jpg");
+      background-position: center;
+      background-size: cover;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      bottom: 10px;
+      left: 30px;
+      background: rgba(0,0,0,0.55);
+      color: white;
+      padding: 15px;
+      max-width: 520px;
+    }
+
+    .hero-overlay h2 {
+      font-size: 35px;
+    }
+
+    .top-news {
+      padding: 20px 30px;
+      border-top: 3px solid #ad0e0e;
+      border-bottom: 3px solid #ad0e0e;
+      font-size: 20px;
+      text-align: justify;
+    }
+
+    .top-news p {
+      padding: 8px 0;
+      font-weight: bold;
+      cursor: pointer;
+      transition: color 0.2s;
+    }
+
+    .top-news p:hover {
+      color: #c40000;
+    }
+
+    .latest {
+      padding: 20px 30px;
+    }
+
+    .latest h3 {
+      margin-bottom: 15px;
+    }
+
+    .card {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 15px;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 10px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .card:hover {
+      background: #fafafa;
+    }
+
+    .card img {
+      width: 100px;
+      height: 70px;
+      object-fit: cover;
+    }
+
+    .card p {
+      font-size: 14px;
+    }
+
+     .footer {
+     text-align: center;
+     padding: 14px 0;
+     font-size: 14px;
+     opacity: 0.8;
+    }
+    .divider {
+     margin: 0 6px;
+    }
+
+.anim-fade-up {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.anim-fade-up.is-active {
+  animation: fadeUp 0.6s ease-out both;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.delay-1 { animation-delay: 0.15s; }
+.delay-2 { animation-delay: 0.3s; }
+.delay-3 { animation-delay: 0.45s; }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="top-bar anim-fade-up is-active">
+    <marquee behavior="scroll" direction="right">SELAMAT DATANG</marquee>
+  </div>
+
+  <header class="header anim-fade-up is-active">
+    <h1 class="logo anim-fade-up is-active">INFO TARAKAN</h1>
+    <a href="tentang.html" class="contact-us anim-fade-up is-active">Hubungi Kami!</a>
+  </header>
+
+  <nav class="navbar anim-fade-up is-active">
+    <a href="# "></a>
+    <a href="Vers.html">Rumah</a>
+    <a href="tentang.html">Tentang</a>
+    <a href="halaman-depan.html">Kembali</a>
+  </nav>
+
+  <section class="hero anim-fade-up is-active">
+    <div class="hero-overlay anim-fade-up is-active">
+      <h2>Sosok Ganteng Se-Indonesia Raya</h2>
+    </div>
+  </section>
+
+  <section class="top-news anim-fade-up is-active">
+    <p>INFO UP TO DATE TARAKAN</p>
+    
+  </section>
+  <section class="latest anim-fade-up is-active">
+    <h3>ARTIKEL TERBARU</h3>
+
+    <div class="card anim-fade-up is-active">
+      <img src="01.jpg">
+      <p>Kepolisian sudah berusaha lama mencari pelaku maling ayam 3 tahun terakhir.
+        Investigasi berjalan lama dikarena pelaku terus sakit <a href="page2.html">sehingga....</a></p>
+    </div>
+
+    <div class="card anim-fade-up is-active">
+      <img src="03.jpg">
+      <p>Pemain sape yang masih diburu oleh KPK karena penggelapan dana. Penangkapan terus terhenti <a href="page1.html">dikarenakan....</a></p>
+    </div>
+    
+  <footer class="footer anim-fade-up is-active">
+    2025 <span class="divider">|</span> Edelwin Rafa
+  </footer>
+
+</body>
+</html>

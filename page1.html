@@ -1,0 +1,132 @@
+<html lang="id">
+<head>
+  <title>RaWin NT</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background: #dddddd;
+      color: #111;
+    }
+
+    header {
+      padding: 20px 40px;
+      display: flex;
+      align-items: center;
+      background: #ad0e0e
+
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+      color: #dddddd;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      padding: 60px 20px;
+    }
+
+    .content {
+      max-width: 800px;
+      background: #dddddd;
+      padding: 32px;
+      border-radius: 16px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+    }
+
+    .content h1 {
+      margin-bottom: 20px;
+      color: #ff0000;
+    }
+
+    .content p {
+      margin-bottom: 16px;
+      line-height: 1.7;
+      opacity: 0.9;
+    }
+
+    footer {
+      text-align: center;
+      padding: 14px 0;
+      font-size: 14px;
+      opacity: 0.8;
+    }
+
+    .anim-fade-up {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.anim-fade-up.is-active {
+  animation: fadeUp 0.6s ease-out both;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.delay-1 { animation-delay: 0.15s; }
+.delay-2 { animation-delay: 0.3s; }
+.delay-3 { animation-delay: 0.45s; }
+
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo anim-fade-up is-active">RaWin NT</div>
+  </header>
+
+  <main>
+    <div class="content anim-fade-up is-active">
+      <h1>Pemain Sape yang Korup</h1>
+
+      <p>
+        Pemain sape yang sempat menjadi sorotan publik kembali
+        menjadi perbincangan hangat setelah namanya disebut
+        dalam penyelidikan kasus penggelapan dana berskala besar.
+        Hingga saat ini, keberadaannya masih belum diketahui.
+      </p>
+
+      <p>
+        Aparat penegak hukum mengungkapkan bahwa proses penangkapan
+        mengalami hambatan akibat minimnya informasi valid
+        terkait lokasi terakhir yang bersangkutan. Beberapa saksi
+        telah dimintai keterangan untuk memperkuat bukti.
+      </p>
+
+      <p>
+        Kasus ini menjadi perhatian luas karena melibatkan dana
+        publik dan figur yang cukup dikenal di kalangan masyarakat.
+        Pihak berwenang memastikan penyelidikan akan terus
+        berlanjut hingga tuntas.
+      </p>
+    </div>
+  </main>
+
+  <footer>
+    2025 | Edelwin Rafa
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,173 @@
+<html lang="id">
+<head>
+  <title>RaWin NT</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background: #dddddd;
+      color: #ffffff;
+    }
+
+    .header {
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card-container {
+      display: flex;
+      gap: 30px;
+    }
+
+    .card {
+      background: #c40000;
+      border-radius: 16px;
+      padding: 20px;
+      width: 260px;
+      text-align: center;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+    }
+
+    .photo {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: #dddddd;
+      margin: 0 auto 15px;
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      color: #dddddd;
+    }
+
+    .card p {
+      font-size: 14px;
+      margin: 4px 0;
+      opacity: 0.9;
+    }
+
+    .back-wrapper {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .back-btn {
+      display: inline-block;
+      padding: 12px 28px;
+      background: #ff0000;
+      color: #dddddd;
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: bold;
+      transition: 0.3s ease;
+    }
+
+    .back-btn:hover {
+      transform: translateY(-4px);
+      background: #ad0e0e;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 14px 0;
+      font-size: 14px;
+      opacity: 0.8;
+    }
+
+    .divider {
+      margin: 0 6px;
+    }
+
+.anim-fade-up {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.anim-fade-up.is-active {
+  animation: fadeUp 0.6s ease-out both;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.delay-1 { animation-delay: 0.15s; }
+.delay-2 { animation-delay: 0.3s; }
+.delay-3 { animation-delay: 0.45s; }
+
+
+  </style>
+</head>
+
+<body>
+  <header class="header anim-fade-up is-active">
+  </header>
+
+  <main>
+    <div>
+      <div class="card-container anim-fade-up is-active">
+
+        <div class="card anim-fade-up is-active">
+          <div class="photo anim-fade-up is-active"></div>
+          <h3>Rafa Adhitya Darmanto</h3>
+          <p>📞 081253952030</p>
+          <p>📧 rafaadhityad@gmail.com</p>
+          <p>🏠 Jl. Ladang Dalam RT.09</p>
+          <p>🎓 XII G</p>
+          <p>🏫 SMA Negeri 1 Tarakan</p>
+        </div>
+
+        <div class="card anim-fade-up is-active">
+          <div class="photo anim-fade-up is-active"></div>
+          <h3>Edelwin Suviryananda Yovandra</h3>
+          <p>📞 081257262445</p>
+          <p>📧 edelwinsuviryanandagmail.com</p>
+          <p>🏠 Jl. Niaga 1 RT.13</p>
+          <p>🎓 XII G</p>
+          <p>🏫 SMA Negeri 1 Tarakan</p>
+        </div>
+
+      </div>
+
+      <div class="back-wrapper anim-fade-up is-active">
+        <a href="vers.html" class="back-btn anim-fade-up is-active">← Kembali</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer anim-fade-up is-active">
+    2025 <span class="divider anim-fade-up is-active">|</span> Edelwin Rafa
+  </footer>
+
+</body>
+</html>
